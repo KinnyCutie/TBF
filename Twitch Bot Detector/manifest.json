@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Bot Flagger",
+  "version": "1.0",
+  "description": "Flags chatters on Twitch based on account age.",
+  "permissions": [],
+  "host_permissions": [
+    "https://api.ivr.fi/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.twitch.tv/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
